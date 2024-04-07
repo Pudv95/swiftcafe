@@ -7,5 +7,6 @@ void main(){
     theme: themeData,
     routerDelegate: Routes().router.routerDelegate,
     routeInformationParser: Routes().router.routeInformationParser,
+    routeInformationProvider: Routes().router.routeInformationProvider,
   ));
 }
