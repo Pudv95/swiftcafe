@@ -8,7 +8,7 @@ class CustomInputField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       decoration:   InputDecoration(
-        label: Text(label,style: const TextStyle(color: Colors.white),),
+        label: Text(label,style:  Theme.of(context).textTheme.displaySmall),
         border: const UnderlineInputBorder(
           borderSide: BorderSide(color: Colors.white)
         )

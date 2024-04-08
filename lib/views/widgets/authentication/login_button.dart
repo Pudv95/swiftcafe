@@ -11,7 +11,7 @@ class LoginButton extends StatelessWidget {
     return Container(
       height: (50/height)*height,
       width: (184/width)*width,
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         borderRadius: BorderRadius.all(Radius.circular(50)),
         gradient: LinearGradient(
           colors: [
@@ -21,6 +21,14 @@ class LoginButton extends StatelessWidget {
           begin: Alignment.centerLeft,
           end: Alignment.centerRight,
         ),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.5), // Set the color of the shadow
+            spreadRadius: 3, // Set the spread radius of the shadow
+            blurRadius: 5, // Set the blur radius of the shadow
+            offset: Offset(0, 3), // Set the offset of the shadow
+          ),
+        ]
       ),
       child: ElevatedButton(
         onPressed: () {},

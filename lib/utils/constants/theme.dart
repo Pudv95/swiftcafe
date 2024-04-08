@@ -9,15 +9,15 @@ ThemeData themeData = ThemeData(
     ),
     displayLarge: TextStyle(
       color: Colors.white,
-      fontSize: 24.0,
+      fontSize: 20.0,
     ),
     displayMedium: TextStyle(
       color: Colors.white,
-      fontSize: 20.0,
+      fontSize: 18.0,
     ),
     displaySmall: TextStyle(
       color: Colors.white,
-      fontSize: 18.0,
+      fontSize: 14.0,
     ),
   ),
 );
