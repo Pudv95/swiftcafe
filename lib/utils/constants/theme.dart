@@ -10,8 +10,12 @@ ThemeData themeData = ThemeData(
   primarySwatch: Colors.blue,
   textTheme: const TextTheme(
     bodyLarge: TextStyle(
-      color: Colors.white,
+      color: Colors.grey,
       fontSize: 16.0,
+    ),
+    bodySmall: TextStyle(
+      color: Colors.grey,
+      fontSize: 11.0,
     ),
     displayLarge: TextStyle(
       color: Colors.white,
