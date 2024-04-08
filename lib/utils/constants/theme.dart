@@ -13,6 +13,10 @@ ThemeData themeData = ThemeData(
       color: Colors.grey,
       fontSize: 16.0,
     ),
+    bodySmall: TextStyle(
+      color: Colors.grey,
+      fontSize: 11.0,
+    ),
     displayLarge: TextStyle(
       color: Colors.white,
       fontSize: 20.0,
