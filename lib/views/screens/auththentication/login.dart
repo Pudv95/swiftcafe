@@ -47,8 +47,8 @@ class LoginPage extends StatelessWidget {
                         Text('"Latte but never Late"',style: Theme.of(context).textTheme.displaySmall?.copyWith(
                           shadows: [
                             Shadow(
-                              color: Colors.white.withOpacity(1), // Shadow color
-                              blurRadius: 50, // Shadow blur radius
+                              color: Colors.white.withOpacity(1),
+                              blurRadius: 50,
                             ),
                           ],
                           fontSize: 15,
@@ -67,7 +67,7 @@ class LoginPage extends StatelessWidget {
                                 onPressed: (){},
                               style: ButtonStyle(
                                 side: WidgetStateProperty.resolveWith<BorderSide>(
-                                      (states) => const BorderSide(width: 1, color: Colors.white), // Adjust the width and color
+                                      (states) => const BorderSide(width: 1, color: Colors.white),
                                 ),
                               ),
                                 child: Text('Sign Up',style: Theme.of(context).textTheme.displayMedium,),

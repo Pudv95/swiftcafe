@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
 
 ThemeData themeData = ThemeData(
+  useMaterial3: true,
+  colorScheme: ColorScheme.fromSeed(
+    seedColor: Colors.white,
+    primary: Colors.white,
+    secondary: Colors.white,
+  ),
   primarySwatch: Colors.blue,
   textTheme: const TextTheme(
     bodyLarge: TextStyle(

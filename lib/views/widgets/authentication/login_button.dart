@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class LoginButton extends StatelessWidget {
@@ -12,10 +11,10 @@ class LoginButton extends StatelessWidget {
       height: (50/height)*height,
       width: (184/width)*width,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.all(Radius.circular(50)),
-        gradient: LinearGradient(
+        borderRadius: const BorderRadius.all(Radius.circular(50)),
+        gradient: const LinearGradient(
           colors: [
-            Color.fromRGBO(77, 43, 26, 1), // Brown
+            Color.fromRGBO(77, 43, 26, 1),
             Color.fromRGBO(167, 116, 90, 1),
           ],
           begin: Alignment.centerLeft,
@@ -23,10 +22,10 @@ class LoginButton extends StatelessWidget {
         ),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.5), // Set the color of the shadow
-            spreadRadius: 3, // Set the spread radius of the shadow
-            blurRadius: 5, // Set the blur radius of the shadow
-            offset: Offset(0, 3), // Set the offset of the shadow
+            color: Colors.black.withOpacity(0.5),
+            spreadRadius: 3,
+            blurRadius: 5,
+            offset: const Offset(0, 3),
           ),
         ]
       ),
