@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:swiftcafe/utils/constants/icons.dart';
+import 'package:swiftcafe/views/widgets/dashboard/popular_beverages.dart';
 import 'package:swiftcafe/views/widgets/dashboard/search_bar.dart';
 
 class Dashboard extends StatelessWidget {
@@ -59,6 +60,8 @@ class Dashboard extends StatelessWidget {
                   padding: EdgeInsets.symmetric(horizontal: 20),
                   child: CustomSearchBar(),
                 ),
+                SizedBox(height: 30,),
+                PopularBeverages(),
 
               ],
             ),
