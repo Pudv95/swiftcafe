@@ -31,7 +31,7 @@ class LoginPage extends StatelessWidget {
                 child: Card(
                   elevation: 0,
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
+                    borderRadius: BorderRadius.circular(20),
                     side: const BorderSide(width: 0.5,color: Colors.white)
                   ),
                   color: Colors.white.withOpacity(0.1),
@@ -54,7 +54,7 @@ class LoginPage extends StatelessWidget {
                           fontSize: 15,
                         ),),
                         const SizedBox(height: 20,),
-                        const CustomInputField(label: 'UserName',),
+                        const CustomInputField(label: 'User Name',),
                         const SizedBox(height: 20,),
                         const CustomInputField(label: 'Password',),
                         const SizedBox(height: 20,),
