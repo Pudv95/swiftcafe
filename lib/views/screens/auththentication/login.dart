@@ -1,6 +1,10 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:swiftcafe/utils/constants/vectors.dart';
+import 'package:swiftcafe/utils/routers/routes.dart';
+import 'package:swiftcafe/utils/routers/routes_constants.dart';
+import 'package:swiftcafe/views/screens/dashboard/dashboard.dart';
 import 'package:swiftcafe/views/widgets/authentication/custom_input_field.dart';
 import 'package:swiftcafe/views/widgets/authentication/login_button.dart';
 
@@ -58,7 +62,9 @@ class LoginPage extends StatelessWidget {
                         const SizedBox(height: 20,),
                         const CustomInputField(label: 'Password',),
                         const SizedBox(height: 20,),
-                        const LoginButton(),
+                        LoginButton(onPressed: (){
+                          GoRouter.of(context).goNamed(RouteNames.dashboard);
+                        },),
                         const SizedBox(height: 20,),
                         SizedBox(
                             height: (50/height)*height,

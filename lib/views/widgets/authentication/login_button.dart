@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:swiftcafe/utils/routers/routes.dart';
 
 class LoginButton extends StatelessWidget {
-  const LoginButton({super.key});
+  final void Function()? onPressed;
+  const LoginButton({super.key,required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +33,7 @@ class LoginButton extends StatelessWidget {
         ]
       ),
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: onPressed,
         style: ElevatedButton.styleFrom(
           backgroundColor: Colors.transparent,
           elevation: 0,
