@@ -7,7 +7,7 @@ import 'package:swiftcafe/views/screens/dashboard/dashboard.dart';
 import '../../models/dashboard/beverage_model.dart';
 
 class Routes{
-  GoRouter router = GoRouter(
+  static GoRouter router = GoRouter(
     routes: <RouteBase>[
       GoRoute(
         name: RouteNames.home,

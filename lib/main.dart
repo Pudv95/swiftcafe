@@ -5,8 +5,6 @@ import 'package:swiftcafe/utils/routers/routes.dart';
 void main(){
   return runApp(MaterialApp.router(
     theme: themeData,
-    routerDelegate: Routes().router.routerDelegate,
-    routeInformationParser: Routes().router.routeInformationParser,
-    routeInformationProvider: Routes().router.routeInformationProvider,
+    routerConfig: Routes.router,
   ));
 }

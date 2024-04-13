@@ -60,62 +60,52 @@ class Dashboard extends StatelessWidget {
                 ),
               ],
             ),
-            body: Column(
-              children: [
-                SizedBox(height: 25),
-                const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 20),
-                  child: CustomSearchBar(),
-                ),
-                SizedBox(
-                  height: 30,
-                ),
-                SizedBox(
-                  height: height * 0.7621,
-                  child: ListView.builder(
-                    itemCount: DataBase.getItInstantly.length + 1,
-                    itemBuilder: (BuildContext context, int index) {
-                      if (index == 0) {
-                        return const PopularBeverages();
-                      } else {
-                        if(index == 1){
-                          return Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              SizedBox(height: 30),
-                              Padding(
-                                padding: const EdgeInsets.only(left: 30),
-                                child: Text(
-                                  'Get It Instantly',
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .bodyLarge!
-                                      .copyWith(fontWeight: FontWeight.bold, fontSize: 18),
-                                ),
-                              ),
-                              SizedBox(height: 10),
-                              SizedBox(
-                                height:200,
-                                child: GetItInstantlyCard(
-                                  beverageModel: DataBase.getItInstantly[index - 1],
-                                ),
-                              ),
-                            ],
-                          );
-                        }
-                        else{
-                          return SizedBox(
-                            height: 200,
-                            child: GetItInstantlyCard(
-                              beverageModel: DataBase.getItInstantly[index - 1],
-                            ),
-                          );
-                        }
-                      }
-                    },
+            body: SingleChildScrollView(
+              child: Column(
+                children: [
+                  const SizedBox(height: 25),
+                  const Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 20),
+                    child: CustomSearchBar(),
                   ),
-                )
-              ],
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  const PopularBeverages(),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const SizedBox(height: 30),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 30),
+                        child: Text(
+                          'Get It Instantly',
+                          style: Theme.of(context)
+                              .textTheme
+                              .bodyLarge!
+                              .copyWith(
+                                  fontWeight: FontWeight.bold, fontSize: 18),
+                        ),
+                      ),
+                      const SizedBox(height: 10),
+                      SizedBox(
+                        height: 200,
+                        child: GetItInstantlyCard(
+                          beverageModel: DataBase.getItInstantly[0],
+                        ),
+                      ),
+                    ],
+                  ),
+                  ...List.generate(DataBase.getItInstantly.length, (index) {
+                    return SizedBox(
+                      height: 200,
+                      child: GetItInstantlyCard(
+                        beverageModel: DataBase.getItInstantly[index],
+                      ),
+                    );
+                  }),
+                ],
+              ),
             ),
           ),
         ),
@@ -145,19 +135,34 @@ class GetItInstantlyCard extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(beverageModel.beverageName,style: Theme.of(context).textTheme.bodyLarge?.copyWith(fontSize: 20,color: Colors.grey[300]),),
+                    Text(
+                      beverageModel.beverageName,
+                      style: Theme.of(context)
+                          .textTheme
+                          .bodyLarge
+                          ?.copyWith(fontSize: 20, color: Colors.grey[300]),
+                    ),
                     Row(
                       children: [
-                        Text('${beverageModel.rating} ⭐',),
-                        SizedBox(width: 10,),
+                        Text(
+                          '${beverageModel.rating} ⭐',
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
                         Text('(${beverageModel.orders})'),
-                        SizedBox(width: 20,),
+                        const SizedBox(
+                          width: 20,
+                        ),
                         Image.asset(AppIcons.isVegIcon),
                       ],
                     ),
                     Text(
                       beverageModel.description,
-                      style: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.grey[400],height: 1.1),
+                      style: Theme.of(context)
+                          .textTheme
+                          .bodySmall
+                          ?.copyWith(color: Colors.grey[400], height: 1.1),
                     ),
                   ],
                 ),
@@ -174,9 +179,10 @@ class GetItInstantlyCard extends StatelessWidget {
                         aspectRatio: 1,
                         child: Container(
                           decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
+                              borderRadius: BorderRadius.circular(10),
                               image: DecorationImage(
-                                  image: AssetImage(beverageModel.beverageImage),
+                                  image:
+                                      AssetImage(beverageModel.beverageImage),
                                   fit: BoxFit.fitWidth,
                                   alignment: Alignment.bottomCenter)),
                         ),
@@ -191,7 +197,8 @@ class GetItInstantlyCard extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(5),
                               ),
                             ),
-                            onPressed: () {}, child: const Text('ADD'))),
+                            onPressed: () {},
+                            child: const Text('ADD'))),
                   ],
                 ),
               )
